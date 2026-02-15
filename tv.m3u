@@ -1,5 +1,42 @@
 
 #EXTM3U
+#EXTINF:-1 tvg-id="122" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/BTV.jpg?raw=true" group-title="Bangla🇧🇩",BTV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/index.m3u8
+#EXTINF:1 tvg-name="BTV News" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/BTV_News.jpg?raw=true" group-title="Bangla🇧🇩",BTV News
+https://sonamul3535.vercel.app/Btv-news.m3u8
+#EXTINF:1 tvg-name="BTV CTG" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/BTV_CTG.jpg?raw=true" group-title="Bangla🇧🇩",BTV CTG
+https://sonamul3535.vercel.app/Btv-CTG.m3u8
+#EXTINF:1 tvg-name="SongSod TV" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/Sangsod.jpg?raw=true" group-title="Bangla🇧🇩",SongSod TV
+https://sonamul3535.vercel.app/Songsodh.m3u8
+#EXTINF:-1 tvg-id="97" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/Jamuna%20Tv.jpg?raw=true" group-title="Bangla🇧🇩",Jamuna TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1701/output/index.m3u8
+#EXTINF:-1 tvg-id="98" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/SomoyTv.jpg?raw=true" group-title="Bangla🇧🇩",Somoy Tv
+https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/index.m3u8
+#EXTINF:-1 tvg-id="94" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/Channel%2024.png?raw=true" group-title="Bangla🇧🇩",Channel 24 HD
+https://owrcovcrpy.gpcdn.net/bpk-tv/1703/output/index.m3u8
+#EXTINF:-1 tvg-id="96" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/Independent.jpg?raw=true" group-title="Bangla🇧🇩",Independent TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1704/output/index.m3u8
+#EXTINF:-1 tvg-id="102" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/Ekattor.jpg?raw=true" group-title="Bangla🇧🇩",Ekattor HD
+https://owrcovcrpy.gpcdn.net/bpk-tv/1705/output/index.m3u8
+#EXTINF:-1 tvg-id="93" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/ATN%20NEWS.jpg?raw=true" group-title="Bangla🇧🇩",ATN News
+https://owrcovcrpy.gpcdn.net/bpk-tv/1706/output/index.m3u8
+#EXTINF:-1 tvg-id="134" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/Deepto%20Tv.jpg?raw=true" group-title="Bangla🇧🇩",Deepto TV HD
+https://owrcovcrpy.gpcdn.net/bpk-tv/1711/output/index.m3u8
+#EXTINF:-1 tvg-id="100" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/Banglavision.jpg?raw=true" group-title="Bangla🇧🇩",Bangla Vision
+https://owrcovcrpy.gpcdn.net/bpk-tv/1715/output/index.m3u8
+#EXTINF:-1 tvg-id="99" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/NTV.jpg?raw=true" group-title="Bangla🇧🇩",NTV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1716/output/index.m3u8
+#EXT
+
+
+
+<--192 File -->
+
+
+
+
+
+#EXTM3U
 #EXTINF:-1 group-title="Sports", TEN 3 Hindi - Rs 19.00
 http://103.229.254.25:7001/play/a09q/index.m3u8
 #EXTINF:-1 group-title="Movies", & PICTURE HD
