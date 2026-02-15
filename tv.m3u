@@ -1,3 +1,52 @@
+#EXTM3U
+#EXTINF:-1 group-title="External Playlists",IPTVFlixBD Playlist
+https://raw.githubusercontent.com/IPTVFlixBD/Fancode-BD/refs/heads/main/playlist.m3u
+
+# --- BANGLA & LOCAL ---
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/3/31/Deepto_TV_logo.png" group-title="Bangla",Deepto TV
+https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8
+#EXTINF:-1 tvg-name="BTV HD" group-title="Bangla",BTV HD
+https://tvsen6.aynaott.com/btvhd/index.m3u8
+#EXTINF:-1 tvg-name="Channel 24" group-title="Bangla",Channel 24
+https://tvsen6.aynaott.com/channel24/index.m3u8
+#EXTINF:-1 tvg-name="DBC News" group-title="Bangla",DBC News
+https://tvsen6.aynaott.com/dbcnews/index.m3u8
+
+# --- KIDS & ANIMATION ---
+#EXTINF:-1 tvg-name="24/7 Gopal Bhar" group-title="Kids",24/7 Gopal Bhar
+https://cloudfrontnet.vercel.app/tplay/playout/209611/master.m3u8
+#EXTINF:-1 tvg-name="24/7 Shinchan" group-title="Kids",24/7 Shinchan
+https://cloudfrontnet.vercel.app/tplay/playout/209901/master.m3u8
+#EXTINF:-1 tvg-name="4/7 Doraemon" group-title="Kids",4/7 Doraemon
+https://cloudfrontnet.vercel.app/tplay/playout/209902/master.m3u8
+
+# --- SPORTS & INTERNATIONAL ---
+#EXTINF:-1 tvg-name="Astro Premier League" group-title="Sports",Astro Premier League
+https://a1xs.vip/1100030
+#EXTINF:-1 tvg-name="BeIN Sports 1" group-title="Sports",BeIN Sports 1
+http://135.125.109.73:9000/beinsport1_.m3u8
+#EXTINF:-1 tvg-name="Sky Sport Bundesliga" group-title="Sports",Sky Sport Bundesliga
+https://a1xs.vip/120002
+#EXTINF:-1 tvg-name="CNN News FHD" group-title="News",CNN UK FHD
+https://a1xs.vip/1000016
+
+# --- HINDI MOVIES & MUSIC ---
+#EXTINF:-1 tvg-name="& Pictures" group-title="Hindi Movies",& Pictures
+https://tvsen6.aynaott.com/andpictureshd/index.m3u8
+#EXTINF:-1 tvg-name="B4U Kadak" group-title="Hindi Movies",B4U Kadak
+https://cdnb4u.wiseplayout.com/B4U_Kadak/master.m3u8
+#EXTINF:-1 tvg-name="Dangal" group-title="Hindi",Dangal
+https://live-dangal.akamaized.net/liveabr/playlist.m3u8
+#EXTINF:-1 tvg-name="Dhinchaak" group-title="Hindi",Dhinchaak
+https://tvsen6.aynaott.com/Dhinchaak/index.m3u8
+#EXTINF:-1 tvg-name="9XM" group-title="Music",9XM
+https://tvsen6.aynaott.com/9xm/index.m3u8
+
+
+
+<--others-->
+
+
 
 #EXTM3U
 #EXTINF:-1 tvg-id="122" tvg-logo="https://github.com/sonamul4545/Channel_logo-s/blob/main/BTV.jpg?raw=true" group-title="Bangla🇧🇩",BTV
