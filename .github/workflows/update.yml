@@ -29,11 +29,11 @@ jobs:
       - name: Run Merger
         run: python main.py
 
-      - name: Commit and Push Changes
+      
+- name: Commit and Push Changes
         run: |
-          git config --local user.email "minortigers1@gmail.com"
-          git config --local user.name "GitHub Action Bot"
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Action"
           git add all_channels.m3u
-          # The '|| exit 0' ensures the workflow doesn't fail if there are no changes
-          git commit -m "Updated Playlist: $(date)" || exit 0
-          git push origin main
+          # This line prevents the "nothing to commit" error
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto Update $(date)" && git push origin 
