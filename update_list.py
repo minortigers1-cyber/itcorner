@@ -1,6 +1,9 @@
 import requests
+import urllib3
 
-# Your specific IPTV source links
+# Suppress the "Insecure Request" warnings for the IP-based links
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 urls = [
     "http://103.229.254.25:7001/playlist.m3u8",
     "https://da.gd/NTOW8q",
@@ -12,36 +15,28 @@ urls = [
 ]
 
 def merge_iptv_lists(url_list, output_filename):
-    # Headers to mimic a real VLC/IPTV player to avoid being blocked
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-    }
+    headers = {'User-Agent': 'Mozilla/5.0 (VLC)'} # Simpler agent often works better for IPTV
     
     with open(output_filename, "w", encoding="utf-8") as f:
-        # The mandatory first line for all M3U files
         f.write("#EXTM3U\n")
         
         for url in url_list:
             try:
                 print(f"🔄 Processing: {url}")
-                response = requests.get(url, headers=headers, timeout=15)
+                # Added verify=False to bypass SSL errors
+                response = requests.get(url, headers=headers, timeout=10, verify=False)
                 response.raise_for_status()
+                response.encoding = 'utf-8'
                 
-                # Split content into lines and filter out empty ones
                 lines = [line.strip() for line in response.text.splitlines() if line.strip()]
-                
-                # If the first line is #EXTM3U, we skip it to prevent mid-file headers
                 start_index = 1 if lines and lines[0].startswith("#EXTM3U") else 0
                 
                 for line in lines[start_index:]:
                     f.write(line + "\n")
+                print(f"✅ Success")
                 
-                print(f"✅ Successfully merged: {url}")
-                
-            except requests.exceptions.RequestException as e:
-                print(f"❌ Failed to fetch {url}: {e}")
+            except Exception as e:
+                print(f"❌ Error: {e}")
 
 if __name__ == "__main__":
-    output_file = "merged_playlist.m3u"
-    merge_iptv_lists(urls, output_file)
-    print(f"\n✨ COMPLETE: Your file '{output_file}' is ready to be uploaded to GitHub.")
+    merge_iptv_lists(urls, "merged_playlist.m3u")
