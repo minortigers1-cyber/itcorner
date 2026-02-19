@@ -1,47 +1,35 @@
-import requests
-import urllib3
+name: Update My IPTV List
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
-# Disable SSL warnings for the IP-based links
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+permissions:
+  contents: write  # This gives the bot permission to push changes
 
-# Your specific IPTV source links
-URLS = [
-    "http://103.229.254.25:7001/playlist.m3u8",
-    "https://da.gd/NTOW8q",
-    "http://190.61.63.140:12142/playlist.m3u8",
-    "https://da.gd/uuaWX0",
-    "https://is.gd/u2EgWa.m3u",
-    "https://is.gd/y7OKsu.m3u8",
-    "https://is.gd/AUxIDc.m3u"
-]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-OUTPUT_FILE = "playlist.m3u"
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
 
-def main():
-    headers = {'User-Agent': 'VLC/3.0.18 LibVLC/3.0.18'}
-    
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write("#EXTM3U\n") # Start the master file
-        
-        for url in URLS:
-            try:
-                print(f"Fetching: {url}")
-                # verify=False is key for the IP-based links (103.229... etc)
-                response = requests.get(url, headers=headers, timeout=20, verify=False)
-                response.raise_for_status()
-                response.encoding = 'utf-8'
-                
-                lines = response.text.splitlines()
-                
-                # We skip the first line (#EXTM3U) of each link so it's not repeated
-                start_index = 1 if lines and lines[0].strip().startswith("#EXTM3U") else 0
-                
-                for line in lines[start_index:]:
-                    if line.strip():
-                        f.write(line + "\n")
-                print(f"✅ Success")
-            except Exception as e:
-                print(f"❌ Failed {url}: {e}")
+      - name: Install Dependencies
+        run: pip install requests urllib3
 
-if __name__ == "__main__":
-    main()
+      - name: Run Merge Script
+        run: python update_playlist.py
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add playlist.m3u
+          # The next line prevents the error if there are no channel updates
+          git commit -m "Automated Playlist Update" || echo "No changes to commit"
+          git push origin main
