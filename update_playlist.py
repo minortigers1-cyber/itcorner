@@ -7,7 +7,6 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 URLS = [
     "http://103.229.254.25:7001/playlist.m3u8",
     "https://da.gd/NTOW8q",
-    "http://190.61.63.140:12142/playlist.m3u8",
     "https://da.gd/uuaWX0",
     "https://is.gd/u2EgWa.m3u",
     "https://is.gd/y7OKsu.m3u8",
