@@ -1,11 +1,12 @@
 name: Update IPTV
 on:
   schedule:
-    - cron: '0 0 * * *' # Updates every 24 hours
-  workflow_dispatch: # Allows manual run button
+    # This triggers the workflow at the start of every even hour (00:00, 02:00, etc.)
+    - cron: '0 */2 * * *' 
+  workflow_dispatch: 
 
 permissions:
-  contents: write # Crucial: Fixes the permission/push error
+  contents: write 
 
 jobs:
   build:
