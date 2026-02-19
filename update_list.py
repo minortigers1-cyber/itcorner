@@ -1,35 +1,47 @@
 import requests
 
-# List your IPTV M3U source links here
+# Your specific IPTV source links
 urls = [
-    "https://example.com/playlist1.m3u",
-    "https://example.com/playlist2.m3u",
-    "https://raw.githubusercontent.com/someone/list/master/index.m3u"
+    "http://103.229.254.25:7001/playlist.m3u8",
+    "https://da.gd/NTOW8q",
+    "http://190.61.63.140:12142/playlist.m3u8",
+    "https://da.gd/uuaWX0",
+    "https://is.gd/u2EgWa.m3u",
+    "https://is.gd/y7OKsu.m3u8",
+    "https://is.gd/AUxIDc.m3u"
 ]
 
-def merge_playlists(url_list, output_file):
-    with open(output_file, "w", encoding="utf-8") as f:
-        # Write the required M3U header once
+def merge_iptv_lists(url_list, output_filename):
+    # Headers to mimic a real VLC/IPTV player to avoid being blocked
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
+    
+    with open(output_filename, "w", encoding="utf-8") as f:
+        # The mandatory first line for all M3U files
         f.write("#EXTM3U\n")
         
         for url in url_list:
             try:
-                print(f"Fetching: {url}")
-                response = requests.get(url, timeout=10)
+                print(f"🔄 Processing: {url}")
+                response = requests.get(url, headers=headers, timeout=15)
                 response.raise_for_status()
                 
-                lines = response.text.splitlines()
+                # Split content into lines and filter out empty ones
+                lines = [line.strip() for line in response.text.splitlines() if line.strip()]
                 
-                # Skip the first line (#EXTM3U) of each source to avoid duplicates
+                # If the first line is #EXTM3U, we skip it to prevent mid-file headers
                 start_index = 1 if lines and lines[0].startswith("#EXTM3U") else 0
                 
                 for line in lines[start_index:]:
-                    if line.strip(): # Avoid empty lines
-                        f.write(line + "\n")
-                        
-            except Exception as e:
-                print(f"Error fetching {url}: {e}")
+                    f.write(line + "\n")
+                
+                print(f"✅ Successfully merged: {url}")
+                
+            except requests.exceptions.RequestException as e:
+                print(f"❌ Failed to fetch {url}: {e}")
 
 if __name__ == "__main__":
-    merge_playlists(urls, "merged_playlist.m3u")
-    print("Done! Created merged_playlist.m3u")
+    output_file = "merged_playlist.m3u"
+    merge_iptv_lists(urls, output_file)
+    print(f"\n✨ COMPLETE: Your file '{output_file}' is ready to be uploaded to GitHub.")
