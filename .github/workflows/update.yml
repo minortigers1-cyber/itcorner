@@ -2,7 +2,7 @@ name: IPTV Auto Merge
 
 on:
   schedule:
-    - cron: '0 */6 * * *' 
+    - cron: '0 */1 * * *' 
   workflow_dispatch:      
 
 # This block is MANDATORY to allow the bot to save the file back to your repo
