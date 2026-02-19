@@ -7,13 +7,13 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # 2. Configuration
 URLS = [
-"https://starshare.net:80/get.php?username=Suryaaa&password=SURYAAAA&type=m3u",
-"http://103.229.254.25:7001/playlist.m3u8",
-"https://da.gd/NTOW8q",
-"https://da.gd/uuaWX0",
-"https://is.gd/u2EgWa.m3u",
-"https://is.gd/y7OKsu.m3u8",
-"https://is.gd/AUxIDc.m3u"
+    "http://103.229.254.25:7001/playlist.m3u8",
+    "https://da.gd/NTOW8q",
+    "https://starshare.net:80/get.php?username=Suryaaa&password=SURYAAAA&type=m3u",
+    "https://da.gd/uuaWX0",
+    "https://is.gd/u2EgWa.m3u",
+    "https://is.gd/y7OKsu.m3u8",
+    "https://is.gd/AUxIDc.m3u"
 ]
 
 HEADERS = {'User-Agent': 'VLC/3.0.18 LibVLC/3.0.18'}
