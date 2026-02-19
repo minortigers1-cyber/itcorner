@@ -3,9 +3,14 @@ import re
 
 # List all your source M3U links here
 SOURCES = [
-    "https://iptv-org.github.io/iptv/countries/us.m3u",
-    "https://iptv-org.github.io/iptv/countries/uk.m3u",
-    "https://raw.githubusercontent.com/freetv-org/samsung-tv-plus/main/playlists/samsung-tv-plus-all.m3u"
+   
+"http://103.229.254.25:7001/playlist.m3u8",
+"https://da.gd/NTOW8q",
+"http://190.61.63.140:12142/playlist.m3u8",
+"https://da.gd/uuaWX0",
+"https://is.gd/u2EgWa.m3u",
+"https://is.gd/y7OKsu.m3u8",
+"https://is.gd/AUxIDc.m3u"
 ]
 
 def main():
