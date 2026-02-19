@@ -1,35 +1,45 @@
-name: Update My IPTV List
-on:
-  schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+import requests
+import urllib3
 
-permissions:
-  contents: write  # This gives the bot permission to push changes
+# Suppress security warnings for IP-based links
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+URLS = [
+    "http://103.229.254.25:7001/playlist.m3u8",
+    "https://da.gd/NTOW8q",
+    "http://190.61.63.140:12142/playlist.m3u8",
+    "https://da.gd/uuaWX0",
+    "https://is.gd/u2EgWa.m3u",
+    "https://is.gd/y7OKsu.m3u8",
+    "https://is.gd/AUxIDc.m3u"
+]
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
+def main():
+    # VLC User-Agent prevents servers from blocking the script
+    headers = {'User-Agent': 'VLC/3.0.18 LibVLC/3.0.18'}
+    output_file = "playlist.m3u"
+    
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write("#EXTM3U\n")
+        
+        for url in URLS:
+            try:
+                print(f"Processing: {url}")
+                # verify=False is mandatory for the IP 103.229... links
+                r = requests.get(url, headers=headers, timeout=20, verify=False)
+                r.raise_for_status()
+                r.encoding = 'utf-8'
+                
+                lines = r.text.splitlines()
+                # Skip the #EXTM3U line if it exists in the source
+                start = 1 if lines and lines[0].strip().startswith("#EXTM3U") else 0
+                
+                for line in lines[start:]:
+                    if line.strip():
+                        f.write(line + "\n")
+                print(f"✅ Added {url}")
+            except Exception as e:
+                print(f"❌ Failed {url}: {e}")
 
-      - name: Install Dependencies
-        run: pip install requests urllib3
-
-      - name: Run Merge Script
-        run: python update_playlist.py
-
-      - name: Commit and Push
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add playlist.m3u
-          # The next line prevents the error if there are no channel updates
-          git commit -m "Automated Playlist Update" || echo "No changes to commit"
-          git push origin main
+if __name__ == "__main__":
+    main()
