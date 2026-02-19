@@ -1,7 +1,8 @@
 import requests
 import urllib3
+from concurrent.futures import ThreadPoolExecutor
 
-# Suppress insecure request warnings if we use verify=False
+# Suppress SSL warnings for servers with invalid certificates
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 SOURCES = [
@@ -14,58 +15,78 @@ SOURCES = [
     "https://is.gd/AUxIDc.m3u"
 ]
 
-# Consistent headers for all requests
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) IPTVPlayer/1.0'}
 
 def is_alive(url):
-    """Checks if a stream URL is actually online."""
+    """Checks if a stream URL is online using a HEAD request."""
     try:
-        # Pass headers and disable SSL verification for maximum compatibility
+        # Added headers and verify=False to prevent blocks/crashes
         response = requests.head(url, headers=HEADERS, timeout=5, allow_redirects=True, verify=False)
         return response.status_code < 400
-    except Exception:
+    except:
         return False
 
-def main():
-    combined_content = ["#EXTM3U"]
-    seen_urls = set()
-
-    for url in SOURCES:
-        try:
-            print(f"🔄 Processing source: {url}")
-            r = requests.get(url, headers=HEADERS, timeout=10, allow_redirects=True, verify=False)
+def process_source(url):
+    """Downloads a playlist and extracts potential channel info."""
+    found_channels = []
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=10, verify=False)
+        if r.status_code == 200:
+            lines = r.text.splitlines()
+            is_list = any(line.startswith("#EXTINF") for line in lines)
             
-            if r.status_code == 200:
-                lines = r.text.splitlines()
-                is_list = any(line.startswith("#EXTINF") for line in lines)
-                
-                if not is_list:
-                    if url not in seen_urls and is_alive(url):
-                        name = url.split('/')[-1].split('?')[0] or "Live Stream"
-                        combined_content.append(f'#EXTINF:-1 group-title="Online Only",{name}')
-                        combined_content.append(url)
-                        seen_urls.add(url)
-                else:
-                    temp_info = None
-                    for line in lines:
-                        line = line.strip()
-                        if line.startswith("#EXTINF"):
-                            temp_info = line
-                        elif line.startswith("http"):
-                            if line not in seen_urls:
-                                if is_alive(line):
-                                    combined_content.append(temp_info if temp_info else f'#EXTINF:-1,{line}')
-                                    combined_content.append(line)
-                                    seen_urls.add(line)
-                            temp_info = None
-            print(f"✅ Finished: {url}")
-        except Exception as e:
-            print(f"❌ Source Error {url}: {e}")
+            if not is_list:
+                found_channels.append((f'#EXTINF:-1 group-title="Direct Links",{url.split("/")[-1]}', url))
+            else:
+                temp_info = None
+                for line in lines:
+                    line = line.strip()
+                    if line.startswith("#EXTINF"):
+                        temp_info = line
+                    elif line.startswith("http") and temp_info:
+                        found_channels.append((temp_info, line))
+                        temp_info = None
+        print(f"✅ Fetched source: {url}")
+    except Exception as e:
+        print(f"❌ Failed source {url}: {e}")
+    return found_channels
 
-    with open("all_channels.m3u", "w", encoding="utf-8") as f:
-        f.write("\n".join(combined_content))
+def main():
+    all_channels = []
+    seen_urls = set()
     
-    print(f"\n✨ Done! Saved {len(seen_urls)} active channels to all_channels.m3u")
+    # 1. Collect all potential links
+    for source in SOURCES:
+        all_channels.extend(process_source(source))
+
+    # 2. Filter duplicates
+    unique_channels = []
+    for info, url in all_channels:
+        if url not in seen_urls:
+            unique_channels.append((info, url))
+            seen_urls.add(url)
+
+    print(f"🔍 Testing {len(unique_channels)} channels for status...")
+
+    # 3. Check status in parallel (Speed boost!)
+    final_playlist = ["#EXTM3U"]
+    
+    def validate_and_format(channel_data):
+        info, url = channel_data
+        if is_alive(url):
+            return f"{info}\n{url}"
+        return None
+
+    with ThreadPoolExecutor(max_workers=20) as executor:
+        results = list(executor.map(validate_and_format, unique_channels))
+        
+    final_playlist.extend([r for r in results if r])
+
+    # 4. Save
+    with open("all_channels.m3u", "w", encoding="utf-8") as f:
+        f.write("\n".join(final_playlist))
+    
+    print(f"✨ Success! Generated 'all_channels.m3u' with {len(final_playlist)-1} active streams.")
 
 if __name__ == "__main__":
     main()
