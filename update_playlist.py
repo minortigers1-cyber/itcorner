@@ -1,88 +1,59 @@
 import requests
-import urllib3
-from concurrent.futures import ThreadPoolExecutor, as_completed
+import json
+from datetime import datetime
+from urllib.parse import urlparse, parse_qs
 
-# 1. Suppress SSL warnings (common with IPTV IP-based links)
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
-# 2. Configuration
-URLS = [
-    "http://103.229.254.25:7001/playlist.m3u8",
-    "https://da.gd/NTOW8q",
-    "http://190.61.63.140:12142/playlist.m3u8",
-    "https://da.gd/uuaWX0",
-    "https://is.gd/u2EgWa.m3u",
-    "https://is.gd/y7OKsu.m3u8",
-    "https://is.gd/AUxIDc.m3u"
-]
-
-HEADERS = {'User-Agent': 'VLC/3.0.18 LibVLC/3.0.18'}
-MAX_THREADS = 25  # Increased for faster processing
-TIMEOUT = 7       # Seconds to wait for a stream to respond
-
-def check_stream(metadata, url):
-    """Checks if a single stream is online."""
+def get_account_info(m3u_url):
     try:
-        # stream=True is the most reliable way to check IPTV links
-        with requests.get(url, headers=HEADERS, timeout=TIMEOUT, 
-                         verify=False, stream=True, allow_redirects=True) as r:
-            if r.status_code == 200:
-                return (metadata, url, True)
-    except Exception:
-        pass
-    return (metadata, url, False)
-
-def main():
-    extracted_pairs = []
-    output_file = "live_playlist.m3u"
-
-    print("--- [Step 1/2] Fetching & Parsing Playlists ---")
-    for playlist_url in URLS:
-        try:
-            print(f"Reading: {playlist_url}")
-            # Use a slightly longer timeout for the initial download
-            r = requests.get(playlist_url, headers=HEADERS, timeout=15, verify=False)
-            r.raise_for_status()
-            
-            lines = r.text.splitlines()
-            temp_metadata = "#EXTINF:-1, Unknown Channel"
-            
-            for line in lines:
-                line = line.strip()
-                if not line: continue
-                
-                if line.startswith("#EXTINF"):
-                    temp_metadata = line
-                elif line.startswith("http"):
-                    extracted_pairs.append((temp_metadata, line))
-                    # Reset metadata to default in case next URL has no header
-                    temp_metadata = "#EXTINF:-1, Unknown Channel"
-                    
-        except Exception as e:
-            print(f"⚠️ Error accessing {playlist_url}: {e}")
-
-    print(f"\n--- [Step 2/2] Validating {len(extracted_pairs)} Streams ---")
-    
-    online_count = 0
-    with open(output_file, "w", encoding="utf-8") as f:
-        f.write("#EXTM3U\n")
+        # 1. Parse credentials from the M3U URL
+        parsed_url = urlparse(m3u_url)
+        base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
+        params = parse_qs(parsed_url.query)
         
-        with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
-            # Map the function to our pairs
-            futures = [executor.submit(check_stream, meta, url) for meta, url in extracted_pairs]
-            
-            for i, future in enumerate(as_completed(futures)):
-                metadata, url, is_online = future.result()
-                
-                if is_online:
-                    f.write(f"{metadata}\n{url}\n")
-                    online_count += 1
-                
-                # Progress Update every 20 streams
-                if (i + 1) % 20 == 0 or (i + 1) == len(extracted_pairs):
-                    print(f"Processed {i+1}/{len(extracted_pairs)}...")
+        username = params.get('username', [None])[0]
+        password = params.get('password', [None])[0]
 
-    print(f"\n✅ Success! Saved {online_count} online channels to '{output_file}'.")
+        if not username or not password:
+            return "❌ Error: Could not find username or password in the URL."
+
+        # 2. Construct the Xtream Codes API Player URL
+        # Format: http://server:port/player_api.php?username=USER&password=PASS
+        api_url = f"{base_url}/player_api.php?username={username}&password={password}"
+
+        # 3. Request account details
+        response = requests.get(api_url, timeout=10, verify=False)
+        data = response.json()
+
+        if "user_info" in data:
+            user = data["user_info"]
+            
+            # Convert Unix timestamp to readable date
+            exp_timestamp = user.get("exp_date")
+            if exp_timestamp and exp_timestamp != "null":
+                expiry_date = datetime.fromtimestamp(int(exp_timestamp)).strftime('%Y-%m-%d %H:%M:%S')
+            else:
+                expiry_date = "Unlimited / Never Expires"
+
+            # Print Results
+            print("-" * 30)
+            print(f"✅ ACCOUNT FOUND")
+            print("-" * 30)
+            print(f"User ID:    {user.get('username')}")
+            print(f"Password:   {user.get('password')}")
+            print(f"Status:     {user.get('status')}")
+            print(f"Expiry:     {expiry_date}")
+            print(f"Max Conns:  {user.get('max_connections')}")
+            print(f"Active now: {user.get('active_cons')}")
+            print("-" * 30)
+        else:
+            print("❌ Invalid Credentials or Server Rejected request.")
+
+    except Exception as e:
+        print(f"⚠️ Error: {e}")
+
+# --- SETUP ---
+# Replace this with your actual M3U link
+test_url = "http://starshare.net:80/get.php?username=Suryaaa&password=SURYAAAA&type=m3u"
 
 if __name__ == "__main__":
-    main()
+    get_account_info(test_url)
