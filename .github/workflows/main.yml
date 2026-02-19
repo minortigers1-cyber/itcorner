@@ -33,4 +33,4 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add playlist.m3u
           git commit -m "Auto Update Playlist" || exit 0
-          git push origin HEAD
+          git 
