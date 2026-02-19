@@ -2,10 +2,9 @@ name: IPTV Auto Merge
 
 on:
   schedule:
-    - cron: '0 */1 * * *' 
-  workflow_dispatch:      
+    - cron: '0 */1 * * *' # Runs every hour
+  workflow_dispatch:      # Allows manual trigger
 
-# This block is MANDATORY to allow the bot to save the file back to your repo
 permissions:
   contents: write
 
@@ -29,11 +28,15 @@ jobs:
       - name: Run Merger
         run: python main.py
 
-      
-- name: Commit and Push Changes
+      - name: Commit and Push Changes
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
+          # Only commit if the file actually changed to avoid unnecessary builds
           git add all_channels.m3u
-          # This line prevents the "nothing to commit" error
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto Update $(date)" && git push origin 
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto Update $(date)"
+            git push origin main
+          fi
