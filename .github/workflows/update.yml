@@ -2,8 +2,8 @@ name: IPTV Auto Merge
 
 on:
   schedule:
-    - cron: '0 */1 * * *' # Runs every hour
-  workflow_dispatch:      # Allows manual trigger
+    - cron: '0 */6 * * *' 
+  workflow_dispatch:      
 
 permissions:
   contents: write
@@ -26,17 +26,21 @@ jobs:
           pip install requests
 
       - name: Run Merger
+        # CHECK: Ensure your python file is actually named 'main.py'
         run: python main.py
 
       - name: Commit and Push Changes
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
-          # Only commit if the file actually changed to avoid unnecessary builds
+          
+          # 1. Stage the file
           git add all_channels.m3u
+          
+          # 2. Check if there are actual changes before committing
           if git diff --staged --quiet; then
-            echo "No changes to commit"
+            echo "No changes detected in playlist. Skipping commit."
           else
             git commit -m "Auto Update $(date)"
-            git push origin main
+            git push origin HEAD
           fi
