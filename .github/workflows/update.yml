@@ -1,27 +1,32 @@
 name: Update IPTV List
+
 on:
   schedule:
     - cron: '0 */6 * * *' # Runs every 6 hours
-  workflow_dispatch: # Allows manual run
+  workflow_dispatch:      # THIS ENABLES THE MANUAL RUN BUTTON
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-      - name: Install dependencies
-        run: pip install requests
-      - name: Run script
-        run: python your_script_name.py
-      - name: Commit and push changes
+
+      - name: Install Dependencies
+        run: pip install requests urllib3
+
+      - name: Run IPTV Script
+        run: python your_script_name.py # Make sure this matches your .py filename!
+
+      - name: Commit and Push Changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add all_channels.m3u
-          git commit -m "Update IPTV List" || exit 0
+          git commit -m "Auto-update IPTV channels" || echo "No changes to commit"
           git push
