@@ -85,4 +85,4 @@ def main():
     print(f"\n✅ Success! Saved {online_count} online channels to '{output_file}'.")
 
 if __name__ == "__main__":
-    main(
+    main()
