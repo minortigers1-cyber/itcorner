@@ -1,0 +1,15 @@
+{
+  "name": "IPTV Play Pro",
+  "short_name": "IPTV Play",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0f0f0f",
+  "theme_color": "#007bff",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/716/716429.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
