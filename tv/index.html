@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Play App</title>
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        :root { --bg: #0a0a0a; --sidebar: #151515; --accent: #e50914; --text: #ffffff; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; height: 100vh; }
+        
+        /* Sidebar Styling */
+        #sidebar { width: 350px; background: var(--sidebar); display: flex; flex-direction: column; border-right: 1px solid #333; transition: 0.3s; }
+        .header { padding: 25px; background: #111; }
+        .header h2 { margin: 0 0 15px 0; color: var(--accent); font-size: 24px; }
+        
+        input { width: 100%; padding: 12px; background: #222; border: 1px solid #444; color: white; border-radius: 4px; margin-bottom: 10px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: var(--accent); border: none; color: white; border-radius: 4px; cursor: pointer; font-weight: bold; text-transform: uppercase; }
+        button:hover { background: #ff0a16; }
+
+        /* Channel List */
+        #channelList { flex-grow: 1; overflow-y: auto; padding: 10px; }
+        .channel { padding: 12px; margin-bottom: 5px; background: #1e1e1e; border-radius: 4px; cursor: pointer; font-size: 14px; border-left: 3px solid transparent; }
+        .channel:hover { background: #2a2a2a; border-left-color: var(--accent); }
+
+        /* Player Area */
+        #main { flex-grow: 1; display: flex; flex-direction: column; background: #000; position: relative; }
+        #video-container { flex-grow: 1; display: flex; align-items: center; justify-content: center; background: #000; }
+        video { width: 100%; max-height: 100%; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
+        
+        .now-playing { padding: 15px; background: rgba(0,0,0,0.8); position: absolute; bottom: 0; width: 100%; box-sizing: border-box; }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            #sidebar { width: 100%; height: 40%; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="sidebar">
+    <div class="header">
+        <h2>IPTV Play</h2>
+        <input type="text" id="urlInput" placeholder="Paste .m3u Link Here">
+        <button onclick="fetchPlaylist()">Load Channels</button>
+    </div>
+    <div id="channelList">
+        <p style="text-align:center; color:#888; margin-top:20px;">Enter a URL to start</p>
+    </div>
+</div>
+
+<div id="main">
+    <div id="video-container">
+        <video id="video" controls playsinline></video>
+    </div>
+    <div class="now-playing" id="status">Select a channel to play</div>
+</div>
+
+<script>
+    const video = document.getElementById('video');
+    const hls = new Hls();
+
+    // 1. Service Worker for PWA Installation
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('sw.js').catch(err => console.log(err));
+        });
+    }
+
+    // 2. Fetch Playlist with CORS Proxy Fix
+    async function fetchPlaylist() {
+        const url = document.getElementById('urlInput').value;
+        if (!url) return alert("Please enter a URL");
+        
+        document.getElementById('channelList').innerHTML = "<p style='padding:20px'>Loading streams...</p>";
+        localStorage.setItem('saved_m3u', url);
+
+        try {
+            // Using AllOrigins to bypass CORS blocks
+            const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+            const response = await fetch(proxyUrl);
+            const data = await response.json();
+            parseM3U(data.contents);
+        } catch (error) {
+            alert("Failed to load playlist. Make sure the link is valid.");
+            console.error(error);
+        }
+    }
+
+    // 3. Simple M3U Parser
+    function parseM3U(content) {
+        const container = document.getElementById('channelList');
+        container.innerHTML = '';
+        const lines = content.split('\n');
+        
+        let count = 0;
+        for (let i = 0; i < lines.length; i++) {
+            if (lines[i].includes('#EXTINF')) {
+                // Find name after the last comma
+                const name = lines[i].split(',').pop() || "Unknown Stream";
+                // The URL is usually the very next line
+                const streamUrl = lines[i+1]?.trim();
+                
+                if (streamUrl && streamUrl.startsWith('http')) {
+                    const item = document.createElement('div');
+                    item.className = 'channel';
+                    item.innerHTML = `<strong>${++count}.</strong> ${name}`;
+                    item.onclick = () => playStream(streamUrl, name);
+                    container.appendChild(item);
+                }
+            }
+        }
+    }
+
+    // 4. Video Playback Engine
+    function playStream(url, name) {
+        document.getElementById('status').innerHTML = `<strong>Playing:</strong> ${name}`;
+        
+        if (Hls.isSupported()) {
+            hls.loadSource(url);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+        } 
+        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            // Native support for Safari/iOS
+            video.src = url;
+            video.play();
+        } else {
+            alert("Your browser does not support HLS streaming.");
+        }
+    }
+
+    // 5. Load last used URL on startup
+    window.onload = () => {
+        const lastUrl = localStorage.getItem('saved_m3u');
+        if (lastUrl) {
+            document.getElementById('urlInput').value = lastUrl;
+            fetchPlaylist();
+        }
+    };
+</script>
+
+</body>
+</html>
