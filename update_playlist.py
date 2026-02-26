@@ -5,7 +5,6 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 URLS = [
-    "https://raw.githubusercontent.com/Sopnnonil775/Bdix3/refs/heads/main/Bdix.m3u",
     "http://103.229.254.25:7001/playlist.m3u8",
     "https://da.gd/NTOW8q",
     "https://is.gd/u2EgWa.m3u",
