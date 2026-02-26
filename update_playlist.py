@@ -9,7 +9,8 @@ URLS = [
     "https://da.gd/NTOW8q",
     "https://is.gd/u2EgWa.m3u",
     "https://is.gd/y7OKsu.m3u8",
-    "https://is.gd/AUxIDc.m3u"
+    "https://is.gd/AUxIDc.m3u",
+"https://raw.githubusercontent.com/sm-monirulislam/AynaOTT-auto-update-playlist/main/AynaOTT.m3u"
 ]
 
 def main():
