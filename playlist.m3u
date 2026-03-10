@@ -1,4 +1,325 @@
 #EXTM3U
+
+#EXTM3U
+#EXT-X-SESSION-DATA:DATA-ID="com.xui.1_5_12r2"
+#EXTINF:-1 xui-id="1" tvg-id="" tvg-name="BTV NATIONAL HD" tvg-logo="" group-title="All Channels",BTV NATIONAL HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41joblEhEiQ6SDQbw5Mr637ys/ts
+#EXTINF:-1 xui-id="2" tvg-id="" tvg-name="BTV NEWS HD" tvg-logo="" group-title="All Channels",BTV NEWS HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jiMWWLmYdxHOULHIGXYPC04/ts
+#EXTINF:-1 xui-id="3" tvg-id="" tvg-name="BTV CHATTAGRAM" tvg-logo="" group-title="All Channels",BTV CHATTAGRAM
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jiFLrw1oyBOECtjKJLevjmI/ts
+#EXTINF:-1 xui-id="4" tvg-id="" tvg-name="ATN BANGLA HD" tvg-logo="" group-title="All Channels",ATN BANGLA HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jq05GpNB2YE9m847gbijVnI/ts
+#EXTINF:-1 xui-id="5" tvg-id="" tvg-name="CHANNEL I HD" tvg-logo="" group-title="All Channels",CHANNEL I HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41ji20-KQy_Y8nLqj_JUL4RzI/ts
+#EXTINF:-1 xui-id="6" tvg-id="" tvg-name="EKUSHEY TV HD" tvg-logo="" group-title="All Channels",EKUSHEY TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41juug75os_HgmCZ_GDRVRHz0/ts
+#EXTINF:-1 xui-id="7" tvg-id="" tvg-name="NTV" tvg-logo="" group-title="All Channels",NTV
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jnEO21OlnPFyRMYxwSP2D88/ts
+#EXTINF:-1 xui-id="8" tvg-id="" tvg-name="RTV HD" tvg-logo="" group-title="All Channels",RTV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jmt8lc5K230_HJXpWbh_Wp8/ts
+#EXTINF:-1 xui-id="9" tvg-id="" tvg-name="ATN NEWS" tvg-logo="" group-title="All Channels",ATN NEWS
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41juhOFfBKBYL1Iw2Ur6AlnR8/ts
+#EXTINF:-1 xui-id="10" tvg-id="" tvg-name="SOMOY TV HD" tvg-logo="" group-title="All Channels",SOMOY TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jur9v0O673qni4FCg5lgvE0/ts
+#EXTINF:-1 xui-id="11" tvg-id="" tvg-name="JAMUNA TV" tvg-logo="" group-title="All Channels",JAMUNA TV
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jjAid0PsY8mkbvfEIbJbshQ/ts
+#EXTINF:-1 xui-id="12" tvg-id="" tvg-name="INDEPENDENT TV" tvg-logo="" group-title="All Channels",INDEPENDENT TV
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jhKjy3ZJA6uvcuEHs__vZrg/ts
+#EXTINF:-1 xui-id="13" tvg-id="" tvg-name="CHANNEL 24 HD" tvg-logo="" group-title="All Channels",CHANNEL 24 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jtBe2O4dY13gEeP5UOoGi6c/ts
+#EXTINF:-1 xui-id="14" tvg-id="" tvg-name="DBC NEWS HD" tvg-logo="" group-title="All Channels",DBC NEWS HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jjNW42XE0-prZNlNW2f_dGk/ts
+#EXTINF:-1 xui-id="15" tvg-id="" tvg-name="NEWS24 HD" tvg-logo="" group-title="All Channels",NEWS24 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jjAL5lHfTTpLEz1EJvvbiyg/ts
+#EXTINF:-1 xui-id="16" tvg-id="" tvg-name="EKATTOR TV HD" tvg-logo="" group-title="All Channels",EKATTOR TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jvPXJZpS8S8BukEcQin8vjY/ts
+#EXTINF:-1 xui-id="17" tvg-id="" tvg-name="EKHON TV HD" tvg-logo="" group-title="All Channels",EKHON TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jnuV4rj_rMW7dWj-UYtLZPU/ts
+#EXTINF:-1 xui-id="18" tvg-id="" tvg-name="SATV HD" tvg-logo="" group-title="All Channels",SATV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jiMo7nS7GyQEJrpCv7xdIG4/ts
+#EXTINF:-1 xui-id="19" tvg-id="" tvg-name="BANGLA VISION" tvg-logo="" group-title="All Channels",BANGLA VISION
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41joZtWAT2K4-hHYGp7MCY9tw/ts
+#EXTINF:-1 xui-id="20" tvg-id="" tvg-name="DESH TV" tvg-logo="" group-title="All Channels",DESH TV
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jpNROFGRXgQHmGQ7_0P_bAA/ts
+#EXTINF:-1 xui-id="21" tvg-id="" tvg-name="MYTV HD" tvg-logo="" group-title="All Channels",MYTV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jq_JVwQvI9PBaLs7qJj2zNM/ts
+#EXTINF:-1 xui-id="22" tvg-id="" tvg-name="BOISHAKHI TV HD" tvg-logo="" group-title="All Channels",BOISHAKHI TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41juwUe0m19do6FD-dqsa_dZM/ts
+#EXTINF:-1 xui-id="23" tvg-id="" tvg-name="GAZI TV HD" tvg-logo="" group-title="All Channels",GAZI TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41juWxcnbPiV5uwDnnZ9u1E0U/ts
+#EXTINF:-1 xui-id="24" tvg-id="" tvg-name="ASIAN TV HD" tvg-logo="" group-title="All Channels",ASIAN TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jgvefmIysNWrYTqXf4M3MR8/ts
+#EXTINF:-1 xui-id="25" tvg-id="" tvg-name="DEEPTO TV HD" tvg-logo="" group-title="All Channels",DEEPTO TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jtAB8WNj6_HlkeLtLsKn8lI/ts
+#EXTINF:-1 xui-id="26" tvg-id="" tvg-name="MAASRANGA TV HD" tvg-logo="" group-title="All Channels",MAASRANGA TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jnki1mDFPxBUoHOV0jPTHhU/ts
+#EXTINF:-1 xui-id="27" tvg-id="" tvg-name="MOHONA TV HD" tvg-logo="" group-title="All Channels",MOHONA TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jnz72ZZGgOELSyV3Kcjm4b8/ts
+#EXTINF:-1 xui-id="28" tvg-id="" tvg-name="BANGLA TV HD" tvg-logo="" group-title="All Channels",BANGLA TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jquywqHpKKwUgO_gj5z3CzM/ts
+#EXTINF:-1 xui-id="29" tvg-id="" tvg-name="NAGORIK TV HD" tvg-logo="" group-title="All Channels",NAGORIK TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jqAXzWhB-6WGpgd_wP7H_r8/ts
+#EXTINF:-1 xui-id="30" tvg-id="" tvg-name="DURONTO TV HD" tvg-logo="" group-title="All Channels",DURONTO TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jniiWZi6MUg-ax2UsUEHBpg/ts
+#EXTINF:-1 xui-id="31" tvg-id="" tvg-name="ANANDA TV" tvg-logo="" group-title="All Channels",ANANDA TV
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jv9NOQmKytXGne4NijPPS5Y/ts
+#EXTINF:-1 xui-id="32" tvg-id="" tvg-name="CHANNEL 9 HD" tvg-logo="" group-title="All Channels",CHANNEL 9 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jmEjOgwXjw7rs2hDJTsMXVA/ts
+#EXTINF:-1 xui-id="33" tvg-id="" tvg-name="STAR JOLSHA HD" tvg-logo="" group-title="All Channels",STAR JOLSHA HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41joGXWD3EjxPFs2wrkvaVWzY/ts
+#EXTINF:-1 xui-id="34" tvg-id="" tvg-name="ZEE BANGLA HD" tvg-logo="" group-title="All Channels",ZEE BANGLA HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jhPsrdQ4FoNiFfQ8_bVg6VQ/ts
+#EXTINF:-1 xui-id="35" tvg-id="" tvg-name="COLORS BANGLA HD" tvg-logo="" group-title="All Channels",COLORS BANGLA HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jgZRn9MTU5BAkLA6-xSwn6g/ts
+#EXTINF:-1 xui-id="36" tvg-id="" tvg-name="SUN BANGLA HD" tvg-logo="" group-title="All Channels",SUN BANGLA HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jmF7LUzufzwXLN7XcQLzvdM/ts
+#EXTINF:-1 xui-id="37" tvg-id="" tvg-name="JALSHA MOVIES HD" tvg-logo="" group-title="All Channels",JALSHA MOVIES HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jqML28qyvpI0ZTmVWCfNca0/ts
+#EXTINF:-1 xui-id="38" tvg-id="" tvg-name="SONY ATTH" tvg-logo="" group-title="All Channels",SONY ATTH
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jnt36m_T59D4FxWH_wK1gko/ts
+#EXTINF:-1 xui-id="39" tvg-id="" tvg-name="ZEE BANGLA CINEMA" tvg-logo="" group-title="All Channels",ZEE BANGLA CINEMA
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jv979k2bNtbsbN9_71IR0kU/ts
+#EXTINF:-1 xui-id="40" tvg-id="" tvg-name="ENTER 10 BANGLA" tvg-logo="" group-title="All Channels",ENTER 10 BANGLA
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jtCr0mjE_7oDlfwxrx97ZRg/ts
+#EXTINF:-1 xui-id="41" tvg-id="" tvg-name="KHUSHBOO" tvg-logo="" group-title="All Channels",KHUSHBOO
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41joTVdOmRG0hLe27hwLql8bg/ts
+#EXTINF:-1 xui-id="42" tvg-id="" tvg-name="AKASH BANGLA" tvg-logo="" group-title="All Channels",AKASH BANGLA
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jnQEFg8Cwhc5qLU26x8IKbM/ts
+#EXTINF:-1 xui-id="43" tvg-id="" tvg-name="STAR PLUS HD" tvg-logo="" group-title="All Channels",STAR PLUS HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jq7CGCWYSUDkRMDdH4YossM/ts
+#EXTINF:-1 xui-id="44" tvg-id="" tvg-name="SONY HD" tvg-logo="" group-title="All Channels",SONY HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41js3Yzg6voiHKGgooNtTHWoI/ts
+#EXTINF:-1 xui-id="45" tvg-id="" tvg-name="ZEE TV HD" tvg-logo="" group-title="All Channels",ZEE TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jl7rUN9HtvdoI6_LYqGse6g/ts
+#EXTINF:-1 xui-id="46" tvg-id="" tvg-name="COLORS HD" tvg-logo="" group-title="All Channels",COLORS HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jpyePEX2PeGl3QfWFsMCBN4/ts
+#EXTINF:-1 xui-id="47" tvg-id="" tvg-name="SUB TV HD" tvg-logo="" group-title="All Channels",SUB TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jmz_V9aHvIvd_tMtYn-B1os/ts
+#EXTINF:-1 xui-id="48" tvg-id="" tvg-name="UTSAV PLUS HD" tvg-logo="" group-title="All Channels",UTSAV PLUS HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41js2HevUScRB-uSgznVPiwEU/ts
+#EXTINF:-1 xui-id="49" tvg-id="" tvg-name="STAR BHARAT HD" tvg-logo="" group-title="All Channels",STAR BHARAT HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jt5RKw-fshitPp-bGMwtnyE/ts
+#EXTINF:-1 xui-id="50" tvg-id="" tvg-name="&TV HD" tvg-logo="" group-title="All Channels",&TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jiW1B9lj_G-3TFc0iXOQAZU/ts
+#EXTINF:-1 xui-id="51" tvg-id="" tvg-name="ARY DIGITAL HD" tvg-logo="" group-title="All Channels",ARY DIGITAL HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jiJnbcGIEvlPjiWOzIOOA5w/ts
+#EXTINF:-1 xui-id="52" tvg-id="" tvg-name="HUM TV HD" tvg-logo="" group-title="All Channels",HUM TV HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jrctwpKBoTGFLqGRdequz7c/ts
+#EXTINF:-1 xui-id="53" tvg-id="" tvg-name="STAR GOLD HD" tvg-logo="" group-title="All Channels",STAR GOLD HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jpCU7rtULNpNkihgnlsrKQE/ts
+#EXTINF:-1 xui-id="54" tvg-id="" tvg-name="UTSAV GOLD HD" tvg-logo="" group-title="All Channels",UTSAV GOLD HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jkBj_L4BAAd_wXhvol4i1pA/ts
+#EXTINF:-1 xui-id="55" tvg-id="" tvg-name="ZEE CINEMA HD" tvg-logo="" group-title="All Channels",ZEE CINEMA HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jjpIPzHHl75JA8JvcbNwBn8/ts
+#EXTINF:-1 xui-id="56" tvg-id="" tvg-name="& PICTURE HD" tvg-logo="" group-title="All Channels",& PICTURE HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jk8XmeQeL5X05hZsUVzl5y8/ts
+#EXTINF:-1 xui-id="57" tvg-id="" tvg-name="SONY MAX HD" tvg-logo="" group-title="All Channels",SONY MAX HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jtEwmZCv3LUn4S5Q_rCGj_0/ts
+#EXTINF:-1 xui-id="58" tvg-id="" tvg-name="COLORS CINEPLEX HD" tvg-logo="" group-title="All Channels",COLORS CINEPLEX HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41ji1yS2stLeSnd7GqWhT8v9c/ts
+#EXTINF:-1 xui-id="59" tvg-id="" tvg-name="STAR GOLD 2 HD" tvg-logo="" group-title="All Channels",STAR GOLD 2 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jizmMJ4zGLP8ZNEA5d8055I/ts
+#EXTINF:-1 xui-id="60" tvg-id="" tvg-name="STAR GOLD SEL HD" tvg-logo="" group-title="All Channels",STAR GOLD SEL HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jpCc3jei_b3W7lC5ewergKE/ts
+#EXTINF:-1 xui-id="61" tvg-id="" tvg-name="T SPORTS HD" tvg-logo="" group-title="All Channels",T SPORTS HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jkKTdl2K80jWh32PYGLKbH0/ts
+#EXTINF:-1 xui-id="62" tvg-id="" tvg-name="T SPORTS FUL HD" tvg-logo="" group-title="All Channels",T SPORTS FUL HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jjiymat58MU3ZrOel1hTIgM/ts
+#EXTINF:-1 xui-id="63" tvg-id="" tvg-name="SONY TEN 1 HD" tvg-logo="" group-title="All Channels",SONY TEN 1 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jrGodHPuggd3LigD0Esyg50/ts
+#EXTINF:-1 xui-id="64" tvg-id="" tvg-name="SONY TEN 2 HD" tvg-logo="" group-title="All Channels",SONY TEN 2 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jnMXnwVg8rdBay_282mUmdk/ts
+#EXTINF:-1 xui-id="65" tvg-id="" tvg-name="SONY TEN 3 HD" tvg-logo="" group-title="All Channels",SONY TEN 3 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jr2eN2tBQhS07UlvvbSE9XM/ts
+#EXTINF:-1 xui-id="66" tvg-id="" tvg-name="SONY TEN 5 HD" tvg-logo="" group-title="All Channels",SONY TEN 5 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jmHKv-Qur8OE-ifR81Ssn4I/ts
+#EXTINF:-1 xui-id="67" tvg-id="" tvg-name="STAR SPORTS 1 HD" tvg-logo="" group-title="All Channels",STAR SPORTS 1 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jucya79c6euwT_4ijm6uxqY/ts
+#EXTINF:-1 xui-id="68" tvg-id="" tvg-name="STAR SPORTS 2 HD" tvg-logo="" group-title="All Channels",STAR SPORTS 2 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jg9q7LRT3Qen8tt_5f1Txmk/ts
+#EXTINF:-1 xui-id="69" tvg-id="" tvg-name="STAR SPORTS HINDI 2 HD" tvg-logo="" group-title="All Channels",STAR SPORTS HINDI 2 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jsSBwFdD9qQ8b5VGtcBY4qk/ts
+#EXTINF:-1 xui-id="70" tvg-id="" tvg-name="STAR SPORTS SL1 HD" tvg-logo="" group-title="All Channels",STAR SPORTS SL1 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jrovaK8GWvzflFjOjpngl-w/ts
+#EXTINF:-1 xui-id="71" tvg-id="" tvg-name="STAR SPORTS SL2 HD" tvg-logo="" group-title="All Channels",STAR SPORTS SL2 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jgfK-XNY1SfgUdlnG4hEYJY/ts
+#EXTINF:-1 xui-id="72" tvg-id="" tvg-name="STAR SPORTS 3" tvg-logo="" group-title="All Channels",STAR SPORTS 3
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41juU0qdlZiZJfNVKbGJUz4vw/ts
+#EXTINF:-1 xui-id="73" tvg-id="" tvg-name="EUROSPORTS HD" tvg-logo="" group-title="All Channels",EUROSPORTS HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jm81MIiDCuLzYV1Khod8I-g/ts
+#EXTINF:-1 xui-id="74" tvg-id="" tvg-name="PTV SPORTS HD" tvg-logo="" group-title="All Channels",PTV SPORTS HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jkuq80rbLuR-CQ5LH1zmhPw/ts
+#EXTINF:-1 xui-id="75" tvg-id="" tvg-name="A SPORTS HD" tvg-logo="" group-title="All Channels",A SPORTS HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jps_Abuzi8KB0UR3oG6WKQ8/ts
+#EXTINF:-1 xui-id="76" tvg-id="" tvg-name="GEO SUPER SPORTS" tvg-logo="" group-title="All Channels",GEO SUPER SPORTS
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jh7irmUk5acbDamyuTQCYM8/ts
+#EXTINF:-1 xui-id="77" tvg-id="" tvg-name="TNT SPORTS 1 HD" tvg-logo="" group-title="All Channels",TNT SPORTS 1 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jpxXaFkcqyiHQYqer0k3ck4/ts
+#EXTINF:-1 xui-id="78" tvg-id="" tvg-name="TNT SPORTS 2 HD" tvg-logo="" group-title="All Channels",TNT SPORTS 2 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jq_FEOmdtZbZrw0joJB-xqU/ts
+#EXTINF:-1 xui-id="79" tvg-id="" tvg-name="TNT SPORTS 3 HD" tvg-logo="" group-title="All Channels",TNT SPORTS 3 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jmEe00LAdM18NBoaTXWY54c/ts
+#EXTINF:-1 xui-id="80" tvg-id="" tvg-name="TNT SPORTS 4 HD" tvg-logo="" group-title="All Channels",TNT SPORTS 4 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jgJZUFQXuN4IkxtLhTi1V-A/ts
+#EXTINF:-1 xui-id="81" tvg-id="" tvg-name="NOVA SPORTS HD1" tvg-logo="" group-title="All Channels",NOVA SPORTS HD1
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41js7hSZkTv-tlfk_ic7iSrLQ/ts
+#EXTINF:-1 xui-id="82" tvg-id="" tvg-name="NOVA SPORTS HD 2" tvg-logo="" group-title="All Channels",NOVA SPORTS HD 2
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jha-sWt8fAmsVtJD1EPZNy8/ts
+#EXTINF:-1 xui-id="83" tvg-id="" tvg-name="DAZN SPORTS HD1" tvg-logo="" group-title="All Channels",DAZN SPORTS HD1
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jmw8nm9mEGcj7lZQNVwtNN4/ts
+#EXTINF:-1 xui-id="84" tvg-id="" tvg-name="DAZN SPORTS HD2" tvg-logo="" group-title="All Channels",DAZN SPORTS HD2
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41juFodDOdyjKau4Jzgz-IahA/ts
+#EXTINF:-1 xui-id="85" tvg-id="" tvg-name="SUPER SPORTS LIVE HD" tvg-logo="" group-title="All Channels",SUPER SPORTS LIVE HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jhh3cLOaYoUAWLUeMvAOTDo/ts
+#EXTINF:-1 xui-id="86" tvg-id="" tvg-name="BEIN SPORTS 1 HD ENG" tvg-logo="" group-title="All Channels",BEIN SPORTS 1 HD ENG
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jljaE7Fd77Yqez40pJaT_bA/ts
+#EXTINF:-1 xui-id="87" tvg-id="" tvg-name="BEIN  SPORTS 2 HD ENG" tvg-logo="" group-title="All Channels",BEIN  SPORTS 2 HD ENG
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jtqaFAlSkAt0s0ymLCKX9-Y/ts
+#EXTINF:-1 xui-id="88" tvg-id="" tvg-name="BEIN SPORTS HD USA" tvg-logo="" group-title="All Channels",BEIN SPORTS HD USA
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jldVeD_DNjGYusjKggmqZTA/ts
+#EXTINF:-1 xui-id="89" tvg-id="" tvg-name="SSC SPORTS 1 HD" tvg-logo="" group-title="All Channels",SSC SPORTS 1 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jjBV58AlBWOW9S1q9KjWDEw/ts
+#EXTINF:-1 xui-id="90" tvg-id="" tvg-name="SKY PREMIER LEAGUE HD" tvg-logo="" group-title="All Channels",SKY PREMIER LEAGUE HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jjkKnYmuwzNvcUv9RmigcgI/ts
+#EXTINF:-1 xui-id="91" tvg-id="" tvg-name="FOX SPORTS HD1 USA" tvg-logo="" group-title="All Channels",FOX SPORTS HD1 USA
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jkQnqxrfw031wQtpE9II_cc/ts
+#EXTINF:-1 xui-id="92" tvg-id="" tvg-name="SKY SPORTS GOLF HD" tvg-logo="" group-title="All Channels",SKY SPORTS GOLF HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jg26_TOaVbEJqIfg1V1hLc8/ts
+#EXTINF:-1 xui-id="93" tvg-id="" tvg-name="NBC GOLF HD" tvg-logo="" group-title="All Channels",NBC GOLF HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41ju9u1Nb8qRRRUBqBF03EsTs/ts
+#EXTINF:-1 xui-id="94" tvg-id="" tvg-name="FOX SPORTS 501 HD" tvg-logo="" group-title="All Channels",FOX SPORTS 501 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jj7cbRmYfcuLZGgQrBdGRUM/ts
+#EXTINF:-1 xui-id="95" tvg-id="" tvg-name="WILLOW CRICKET HD" tvg-logo="" group-title="All Channels",WILLOW CRICKET HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jp9N__zBXLwy1HH8LgUU7mY/ts
+#EXTINF:-1 xui-id="96" tvg-id="" tvg-name="WILLOW CRICKET XTRA HD" tvg-logo="" group-title="All Channels",WILLOW CRICKET XTRA HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jmFp7JmVWileYfDsnWJrbR4/ts
+#EXTINF:-1 xui-id="97" tvg-id="" tvg-name="SKY SPORTS CRICKET HD" tvg-logo="" group-title="All Channels",SKY SPORTS CRICKET HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jgnTDgHl1espgYY9mgWdnzA/ts
+#EXTINF:-1 xui-id="98" tvg-id="" tvg-name="SUPER CRICKET HD" tvg-logo="" group-title="All Channels",SUPER CRICKET HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jguiavLzWduRqGXem7fuFu8/ts
+#EXTINF:-1 xui-id="99" tvg-id="" tvg-name="TEN SPORTS HD" tvg-logo="" group-title="All Channels",TEN SPORTS HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jtm8BgS_aO_LXIA9BmrCKPs/ts
+#EXTINF:-1 xui-id="100" tvg-id="" tvg-name="24 GANTHA NEWS" tvg-logo="" group-title="All Channels",24 GANTHA NEWS
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jtnfJSb9uGu0qA-GPG9bTbo/ts
+#EXTINF:-1 xui-id="101" tvg-id="" tvg-name="R.BANGLA NEWS" tvg-logo="" group-title="All Channels",R.BANGLA NEWS
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41ju1R_RkG6E2S7wlNPEitIyw/ts
+#EXTINF:-1 xui-id="102" tvg-id="" tvg-name="ZEE NEWS" tvg-logo="" group-title="All Channels",ZEE NEWS
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jqlnDAIj4VDYzpiZ_OeSjE4/ts
+#EXTINF:-1 xui-id="103" tvg-id="" tvg-name="ABP NEWS" tvg-logo="" group-title="All Channels",ABP NEWS
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41ju8e8IZslNGtthh0N2OaO18/ts
+#EXTINF:-1 xui-id="104" tvg-id="" tvg-name="AAJ TAK HD" tvg-logo="" group-title="All Channels",AAJ TAK HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jmDBX5qFWneoBARnVjhTwYI/ts
+#EXTINF:-1 xui-id="105" tvg-id="" tvg-name="GEO NEWS" tvg-logo="" group-title="All Channels",GEO NEWS
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jnXAHIF_15H6c1MqA_3goSI/ts
+#EXTINF:-1 xui-id="106" tvg-id="" tvg-name="ARY NEWS ASIA" tvg-logo="" group-title="All Channels",ARY NEWS ASIA
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jiBkv1etdSW-mw-Ncchf30Q/ts
+#EXTINF:-1 xui-id="107" tvg-id="" tvg-name="SAMAA NEWS" tvg-logo="" group-title="All Channels",SAMAA NEWS
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jmtwb4e70_azFXFsPkiealE/ts
+#EXTINF:-1 xui-id="108" tvg-id="" tvg-name="AL JAZEERA NEWS" tvg-logo="" group-title="All Channels",AL JAZEERA NEWS
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jv2GofvEmUionnBFsZm93Q4/ts
+#EXTINF:-1 xui-id="109" tvg-id="" tvg-name="BBC WORLD" tvg-logo="" group-title="All Channels",BBC WORLD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jjLTIr0H4ncUtwprOJKphQQ/ts
+#EXTINF:-1 xui-id="110" tvg-id="" tvg-name="CNN INTERNATIONAL" tvg-logo="" group-title="All Channels",CNN INTERNATIONAL
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jvLOpWSRPURzylLI-Df9ODE/ts
+#EXTINF:-1 xui-id="111" tvg-id="" tvg-name="CGTN NEWS" tvg-logo="" group-title="All Channels",CGTN NEWS
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jqiru5bdlX8p98TnXfGfjmc/ts
+#EXTINF:-1 xui-id="112" tvg-id="" tvg-name="DW NEWS ENG" tvg-logo="" group-title="All Channels",DW NEWS ENG
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jpTDEuGFZAN7HQXOP1ECof0/ts
+#EXTINF:-1 xui-id="113" tvg-id="" tvg-name="NDTV 24/7" tvg-logo="" group-title="All Channels",NDTV 24/7
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41js8kDs3TR4oTxg5rRioPbUM/ts
+#EXTINF:-1 xui-id="114" tvg-id="" tvg-name="NDTV INDIA" tvg-logo="" group-title="All Channels",NDTV INDIA
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jtPv_xcBQSJCax1rM3JHjJ0/ts
+#EXTINF:-1 xui-id="115" tvg-id="" tvg-name="DISCOVERY HD" tvg-logo="" group-title="All Channels",DISCOVERY HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jvIESumhmpDc1hDsrjxzCuM/ts
+#EXTINF:-1 xui-id="116" tvg-id="" tvg-name="NAT GEO HD" tvg-logo="" group-title="All Channels",NAT GEO HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jja5xJnTe8GoOTe-zaGCDvI/ts
+#EXTINF:-1 xui-id="117" tvg-id="" tvg-name="NAT GEO WILD HD" tvg-logo="" group-title="All Channels",NAT GEO WILD HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jrIP4_wGFmlx2iVfTrCKVkc/ts
+#EXTINF:-1 xui-id="118" tvg-id="" tvg-name="ANIMAL PLANET HD" tvg-logo="" group-title="All Channels",ANIMAL PLANET HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jj1zho9cTWKA8Ce3Aif_RUg/ts
+#EXTINF:-1 xui-id="119" tvg-id="" tvg-name="SONY BBC EARTH HD" tvg-logo="" group-title="All Channels",SONY BBC EARTH HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41js_jsCphqP2kjvFjHnp0zCk/ts
+#EXTINF:-1 xui-id="120" tvg-id="" tvg-name="TRAVEL  XP HD" tvg-logo="" group-title="All Channels",TRAVEL  XP HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jnC536p--rLEbzzbetBYCw0/ts
+#EXTINF:-1 xui-id="121" tvg-id="" tvg-name="HISTORY TV18 HD" tvg-logo="" group-title="All Channels",HISTORY TV18 HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jl2H9h_gXZWhWjv4MhypuwA/ts
+#EXTINF:-1 xui-id="122" tvg-id="" tvg-name="TLC HD" tvg-logo="" group-title="All Channels",TLC HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jkR2Y2c-eKW_J27E_b3uvRQ/ts
+#EXTINF:-1 xui-id="123" tvg-id="" tvg-name="DISCOVERY SCIENCE" tvg-logo="" group-title="All Channels",DISCOVERY SCIENCE
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jh6-e8E8IYIyW_51Ag4A5CA/ts
+#EXTINF:-1 xui-id="124" tvg-id="" tvg-name="CARTOON NETWORK HD" tvg-logo="" group-title="All Channels",CARTOON NETWORK HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jpaq6prLYdnBcrQcJQIKueM/ts
+#EXTINF:-1 xui-id="125" tvg-id="" tvg-name="NICK TV HD+" tvg-logo="" group-title="All Channels",NICK TV HD+
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jvUapt3wMSLreMt1qdgckEM/ts
+#EXTINF:-1 xui-id="126" tvg-id="" tvg-name="DISNEY INT. HD" tvg-logo="" group-title="All Channels",DISNEY INT. HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41ju_clS-7fsZ1qniwo5jkDI0/ts
+#EXTINF:-1 xui-id="127" tvg-id="" tvg-name="CARTOON NETWORK SD" tvg-logo="" group-title="All Channels",CARTOON NETWORK SD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jo4p-Fiphf0s9_cyy3kpE0E/ts
+#EXTINF:-1 xui-id="128" tvg-id="" tvg-name="NICK SD" tvg-logo="" group-title="All Channels",NICK SD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jm1bdgXZV2xRt2ps9srjskk/ts
+#EXTINF:-1 xui-id="129" tvg-id="" tvg-name="SONIC" tvg-logo="" group-title="All Channels",SONIC
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jt2gaT_IIfwGYkwGf-0u2A4/ts
+#EXTINF:-1 xui-id="130" tvg-id="" tvg-name="POGO" tvg-logo="" group-title="All Channels",POGO
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jri8o34hAFIEFZu-bKPWX14/ts
+#EXTINF:-1 xui-id="131" tvg-id="" tvg-name="NICKJUNIOR" tvg-logo="" group-title="All Channels",NICKJUNIOR
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jkzw3qHuAJeUwgPHkkiaLFs/ts
+#EXTINF:-1 xui-id="132" tvg-id="" tvg-name="HUNGAMA SUPER SD" tvg-logo="" group-title="All Channels",HUNGAMA SUPER SD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jqloeOL58wY6qCAwKqujRvw/ts
+#EXTINF:-1 xui-id="133" tvg-id="" tvg-name="HANGAMA SD" tvg-logo="" group-title="All Channels",HANGAMA SD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jo6SLeG27109YYT7KPXTHz0/ts
+#EXTINF:-1 xui-id="134" tvg-id="" tvg-name="DISCOVERY KIDS" tvg-logo="" group-title="All Channels",DISCOVERY KIDS
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jgxe2MUclQ5nZkkzPITahv8/ts
+#EXTINF:-1 xui-id="135" tvg-id="" tvg-name="DISNEY CHANNELS" tvg-logo="" group-title="All Channels",DISNEY CHANNELS
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jtHfhsFHAt0cNjdCbCK2hYU/ts
+#EXTINF:-1 xui-id="136" tvg-id="" tvg-name="DUSENY JUNIOR" tvg-logo="" group-title="All Channels",DUSENY JUNIOR
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jsE5GRuML7IID4Tjfy2Xkr4/ts
+#EXTINF:-1 xui-id="137" tvg-id="" tvg-name="SONY PIX HD" tvg-logo="" group-title="All Channels",SONY PIX HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jroF2Ut3Cbjfq-5bHSjcBTM/ts
+#EXTINF:-1 xui-id="138" tvg-id="" tvg-name="& FLIX HD" tvg-logo="" group-title="All Channels",& FLIX HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jqOcKIs1loNqyRwZwxKggMk/ts
+#EXTINF:-1 xui-id="140" tvg-id="" tvg-name="COLORS INFINITY HD" tvg-logo="" group-title="All Channels",COLORS INFINITY HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jpMLQWJwTztm4-h-CjLYw-4/ts
+#EXTINF:-1 xui-id="141" tvg-id="" tvg-name="STAR MOVIES HD" tvg-logo="" group-title="All Channels",STAR MOVIES HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jorbhN_eddZnm2fmiwKL38c/ts
+#EXTINF:-1 xui-id="142" tvg-id="" tvg-name="STAR MOVIES SEL HD" tvg-logo="" group-title="All Channels",STAR MOVIES SEL HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41juVJ0AU8Hcw0_tiCtd080ag/ts
+#EXTINF:-1 xui-id="143" tvg-id="" tvg-name="MN+ HD" tvg-logo="" group-title="All Channels",MN+ HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jt3CJtbLLd0IFIFErfKD5yE/ts
+#EXTINF:-1 xui-id="144" tvg-id="" tvg-name="MOVIES NOW HD" tvg-logo="" group-title="All Channels",MOVIES NOW HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jlecStBX17agTZsSNWJ6c0I/ts
+#EXTINF:-1 xui-id="145" tvg-id="" tvg-name="ZEE CAFE HD" tvg-logo="" group-title="All Channels",ZEE CAFE HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jkfBG0aU4tAD-7Khn5yu7Ig/ts
+#EXTINF:-1 xui-id="146" tvg-id="" tvg-name="& PRIVE HD" tvg-logo="" group-title="All Channels",& PRIVE HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jjcLsCHzTV2cyW_6NypZYhw/ts
+#EXTINF:-1 xui-id="147" tvg-id="" tvg-name="BET HD*" tvg-logo="" group-title="All Channels",BET HD*
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jlOoQoDwbfL8peGFfipf4wY/ts
+#EXTINF:-1 xui-id="148" tvg-id="" tvg-name="HBO HD" tvg-logo="" group-title="All Channels",HBO HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jt_NehWLZzpevyI_-HYbhqE/ts
+#EXTINF:-1 xui-id="149" tvg-id="" tvg-name="HBO HITS HD" tvg-logo="" group-title="All Channels",HBO HITS HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jhRM4gFQHfiJ-fvm_YO5Z8o/ts
+#EXTINF:-1 xui-id="150" tvg-id="" tvg-name="ROMEDY NOW" tvg-logo="" group-title="All Channels",ROMEDY NOW
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jt17bZhOjDfPOkc8MO1sqdQ/ts
+#EXTINF:-1 xui-id="151" tvg-id="" tvg-name="MNX" tvg-logo="" group-title="All Channels",MNX
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jhY-fYZ0dAI4CnUPFL1_NOo/ts
+#EXTINF:-1 xui-id="152" tvg-id="" tvg-name="SANGEET BANGLA" tvg-logo="" group-title="All Channels",SANGEET BANGLA
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jki9jHq5mlQeqpFfYxqfCuU/ts
+#EXTINF:-1 xui-id="153" tvg-id="" tvg-name="9XM" tvg-logo="" group-title="All Channels",9XM
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jrf_UKUMhk9IhvRwJ2RZUZY/ts
+#EXTINF:-1 xui-id="154" tvg-id="" tvg-name="MASTIII" tvg-logo="" group-title="All Channels",MASTIII
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jjESNN4KzmcICN8UC3dwLro/ts
+#EXTINF:-1 xui-id="155" tvg-id="" tvg-name="MTV INDIA HD" tvg-logo="" group-title="All Channels",MTV INDIA HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41juoHYH1lAaotx0GM83NMeY4/ts
+#EXTINF:-1 xui-id="157" tvg-id="" tvg-name="PEACE TV BANGLA HD" tvg-logo="" group-title="All Channels",PEACE TV BANGLA HD
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jm-8QY3nAPTtKje-dBCX_W8/ts
+#EXTINF:-1 xui-id="158" tvg-id="" tvg-name="SAUDI QURAN" tvg-logo="" group-title="All Channels",SAUDI QURAN
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jmvEB_D1o37yz6gl3xvjDG0/ts
+#EXTINF:-1 xui-id="159" tvg-id="" tvg-name="SAUDI SUNNAH" tvg-logo="" group-title="All Channels",SAUDI SUNNAH
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jrYPRiqvIrO31HXPTTro-FM/ts
+#EXTINF:-1 xui-id="160" tvg-id="" tvg-name="CHANNEL V" tvg-logo="" group-title="All Channels",CHANNEL V
+http://100.64.32.2:8080/play/zjKoo5YnD6hxZM9DgG41jnPI-D43dciX-Rl8GHapBi4/ts
+
+
 #EXTINF:-1 group-title="-", TEN 3 Hindi - Rs 19.00
 http://103.229.254.25:7001/play/a09q/index.m3u8
 #EXTINF:-1 group-title="-",& PICTURE HD
